@@ -55,6 +55,8 @@ void AMyCharacter::Sprint( float InputValue )
 {
 	FVector SprintDirection = GetActorForwardVector();
 	AddMovementInput( SprintDirection, InputValue );
+
+
 }
 
 void AMyCharacter::MoveForward( float InputValue )
