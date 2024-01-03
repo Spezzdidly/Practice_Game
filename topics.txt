@@ -38,3 +38,7 @@ https://docs.unrealengine.com/5.0/en-US/epic-cplusplus-coding-standard-for-unrea
 
 // forum about how to rebuild the landscapes when loading an empty project
 https://forums.unrealengine.com/t/error-landscape-64-actors-with-physical-materials-need-to-be-rebuilt/1310174
+
+// unironically so helpful despite the reddit cringe. it is abt how to remove the large actor performance issues with shadows being cast
+https://www.reddit.com/r/unrealengine/comments/bnduwi/my_terrain_is_giving_me_an_error_large_actor/
+
