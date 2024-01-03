@@ -1,4 +1,4 @@
-Creators: Spencer Johns and Matthew Hayes
+Creators: Spezzdidly and worm130
 
 Project Title: Practice_Game
 
