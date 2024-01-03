@@ -1,0 +1,37 @@
+TOPICS
+
+creating functions/function prototypes
+arrays *
+if statements *
+variables *
+loops *
+includes *
+input/output streams *
+file input and output 
+namespace *
+documentation ( Unreal/Unity, general language, cplusplus.com ) *
+good practices
+base 10 and 16 and windows calculator
+command shell basic/good to know commands (option)
+
+// how to fix include generated.h file error
+https://forums.unrealengine.com/t/cannot-open-source-file-generated-h/447777/3
+
+
+// c++ documentation unreal
+https://docs.unrealengine.com/5.3/en-US/programming-with-cplusplus-in-unreal-engine/
+
+// code for naming conventions and HLSL configuration
+https://raw.githubusercontent.com/microsoft/vc-ue-extensions/main/Source/.editorconfig
+https://github.com/tgjones/HlslTools#custom-preprocessor-definitions-and-additional-include-directories
+
+// for the unreal build tool .dll file missing
+https://forums.unrealengine.com/t/generate-cpp-project-couldnt-find-unrealbuildtool/231288/47
+
+// useful website I found
+https://develop.games
+
+* May want to install godot to make a 2d game?
+
+// coding standards page for unreal
+https://docs.unrealengine.com/5.0/en-US/epic-cplusplus-coding-standard-for-unreal-engine/
