@@ -1,5 +1,3 @@
-// Fill out your copyright notice in the Description page of Project Settings.
-
 #pragma once
 
 #include "CoreMinimal.h"
@@ -26,4 +24,13 @@ public:
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
+protected:
+	UPROPERTY(EditAnywhere) // VisibleAnywhere or (EditAnywhere, BlueprintReadWrite(Only))
+	class UCameraComponent* Camera;
+
+	void MoveForward(float InputValue );
+	void MoveRight(float InputValue );
+
+	void Turn( float InputValue );
+	void LookUp( float InputValue );
 };
