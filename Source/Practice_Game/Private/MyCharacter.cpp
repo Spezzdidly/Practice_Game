@@ -47,6 +47,14 @@ void AMyCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCompone
 
 	PlayerInputComponent->BindAxis( "TurnCamera", this, &AMyCharacter::Turn );
 	PlayerInputComponent->BindAxis( "LookUp", this, &AMyCharacter::LookUp );
+
+	PlayerInputComponent->BindAxis( "Sprint", this, &AMyCharacter::Sprint );
+}
+
+void AMyCharacter::Sprint( float InputValue )
+{
+	FVector SprintDirection = GetActorForwardVector();
+	AddMovementInput( SprintDirection, InputValue );
 }
 
 void AMyCharacter::MoveForward( float InputValue )

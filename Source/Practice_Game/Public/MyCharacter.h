@@ -28,6 +28,7 @@ protected:
 	UPROPERTY(EditAnywhere) // VisibleAnywhere or (EditAnywhere, BlueprintReadWrite(Only))
 	class UCameraComponent* Camera;
 
+	void Sprint( float InputValue );
 	void MoveForward(float InputValue );
 	void MoveRight(float InputValue );
 
