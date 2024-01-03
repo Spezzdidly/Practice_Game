@@ -35,3 +35,6 @@ https://develop.games
 
 // coding standards page for unreal
 https://docs.unrealengine.com/5.0/en-US/epic-cplusplus-coding-standard-for-unreal-engine/
+
+// forum about how to rebuild the landscapes when loading an empty project
+https://forums.unrealengine.com/t/error-landscape-64-actors-with-physical-materials-need-to-be-rebuilt/1310174
