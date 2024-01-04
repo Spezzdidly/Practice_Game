@@ -27,7 +27,7 @@ public:
 
 protected:
 	UPROPERTY(EditAnywhere) // VisibleAnywhere or (EditAnywhere, BlueprintReadWrite(Only))
-	class UCameraComponent* Camera;
+	class UCameraComponent* MainCamera;
 
 	// for 3rd person camera----------------------------------------
 	UPROPERTY(EditAnywhere)
