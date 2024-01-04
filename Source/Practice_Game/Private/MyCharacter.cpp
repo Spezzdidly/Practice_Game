@@ -23,8 +23,6 @@ AMyCharacter::AMyCharacter()
 	MainCamera = CreateDefaultSubobject<UCameraComponent>( TEXT( "ThirdPersonCamera" ) );
 	MainCamera->SetupAttachment(SpringArm); //Changed to springarm // Creates an attachment and uses to attach to the actor
 
-	FPSCamera = CreateDefaultSubobject<UCameraComponent>( TEXT( "FirstPersonCamera" ) );
-	
 	// Didnt need this line because of the spring arm, keeping it if we want to implement first person later
 	// Camera->bUsePawnControlRotation = true; // sets PawnControlRotation to true inside the camera component
 
