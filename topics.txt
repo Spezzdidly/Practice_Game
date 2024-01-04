@@ -42,3 +42,6 @@ https://forums.unrealengine.com/t/error-landscape-64-actors-with-physical-materi
 // unironically so helpful despite the reddit cringe. it is abt how to remove the large actor performance issues with shadows being cast
 https://www.reddit.com/r/unrealengine/comments/bnduwi/my_terrain_is_giving_me_an_error_large_actor/
 
+// How to access Max Walk Speed via scripting and not blueprints
+https://docs.unrealengine.com/5.3/en-US/API/Runtime/Engine/GameFramework/UCharacterMovementComponent/
+https://forums.unrealengine.com/t/how-to-change-max-walk-speed-in-c/383297

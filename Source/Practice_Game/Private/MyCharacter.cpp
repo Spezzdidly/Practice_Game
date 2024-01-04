@@ -21,7 +21,8 @@ AMyCharacter::AMyCharacter()
 void AMyCharacter::BeginPlay()
 {
 	Super::BeginPlay();
-	
+
+
 }
 
 // Called every frame
@@ -35,6 +36,7 @@ void AMyCharacter::Tick(float DeltaTime)
 void AMyCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
+	
 
 	// Binds the action "Jump" to a key press (Spacebar) and uses the jump function from the
 	// ACharacter class to make the player jump when the key is pressed
@@ -55,8 +57,6 @@ void AMyCharacter::Sprint( float InputValue )
 {
 	FVector SprintDirection = GetActorForwardVector();
 	AddMovementInput( SprintDirection, InputValue );
-
-
 }
 
 void AMyCharacter::MoveForward( float InputValue )
