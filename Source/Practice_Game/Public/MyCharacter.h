@@ -26,11 +26,11 @@ public:
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
 protected:
-	UPROPERTY(EditAnywhere) // VisibleAnywhere or (EditAnywhere, BlueprintReadWrite(Only))
+	UPROPERTY( EditAnywhere, BlueprintReadWrite ) // VisibleAnywhere or (EditAnywhere, BlueprintReadWrite(Only))
 	class UCameraComponent* MainCamera;
 
 	// for 3rd person camera----------------------------------------
-	UPROPERTY(EditAnywhere)
+	UPROPERTY( EditAnywhere, BlueprintReadWrite )
 	class USpringArmComponent* SpringArm;
 
 	void Sprint( float InputValue );
