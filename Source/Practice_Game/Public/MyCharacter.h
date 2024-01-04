@@ -29,6 +29,10 @@ protected:
 	UPROPERTY(EditAnywhere) // VisibleAnywhere or (EditAnywhere, BlueprintReadWrite(Only))
 	class UCameraComponent* Camera;
 
+	// for 3rd person camera----------------------------------------
+	UPROPERTY(EditAnywhere)
+	class USpringArmComponent* SpringArm;
+
 	void Sprint( float InputValue );
 	void MoveForward(float InputValue );
 	void MoveRight(float InputValue );

@@ -3,6 +3,8 @@
 
 #include "MyCharacter.h"
 #include "Camera/CameraComponent.h"
+#include "GameFramework/SpringArmComponent.h"
+#include "GameFramework/CharacterMovementComponent.h"
 
 // Sets default values
 AMyCharacter::AMyCharacter()
@@ -10,11 +12,21 @@ AMyCharacter::AMyCharacter()
  	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
+	//for 3rd person camera----------------------------------------
+	SpringArm = CreateDefaultSubobject<USpringArmComponent>( TEXT( "SpringArm" ) );
+	SpringArm->SetupAttachment( RootComponent );
+	SpringArm->bUsePawnControlRotation = true;
+
 	// Grabs the Camera from the MyCharacter.h file then creates an object with a camera component
 	// and gives it the name "Player_Camera"
 	Camera = CreateDefaultSubobject<UCameraComponent>( TEXT( "Player_Camera" ) );
-	Camera->SetupAttachment(RootComponent); // Creates an attachment and uses to attach to the actor
-	Camera->bUsePawnControlRotation = true; // sets PawnControlRotation to true inside the camera component
+	Camera->SetupAttachment(SpringArm); //Changed to springarm // Creates an attachment and uses to attach to the actor
+	
+	//Didnt need this line because of the spring arm, keeping it if we want to implement first person later
+	//Camera->bUsePawnControlRotation = true; // sets PawnControlRotation to true inside the camera component
+
+	bUseControllerRotationPitch = false; // sets the controller rotation pitch to false
+	GetCharacterMovement()->bOrientRotationToMovement = true; // sets the character movement to orient rotation to movement	
 }
 
 // Called when the game starts or when spawned
