@@ -4,6 +4,7 @@
 #include "GameFramework/Character.h"
 #include "MyCharacter.generated.h"
 
+
 UCLASS()
 class PRACTICE_GAME_API AMyCharacter : public ACharacter
 {
