@@ -29,6 +29,9 @@ protected:
 	UPROPERTY( EditAnywhere, BlueprintReadWrite ) // VisibleAnywhere or (EditAnywhere, BlueprintReadWrite(Only))
 	class UCameraComponent* MainCamera;
 
+	UPROPERTY( EditAnywhere, BlueprintReadWrite ) // Creates another camera on the Character BP for first person
+	class UCameraComponent* FPSCamera;
+
 	// for 3rd person camera----------------------------------------
 	UPROPERTY( EditAnywhere, BlueprintReadWrite )
 	class USpringArmComponent* SpringArm;
