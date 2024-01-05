@@ -1,5 +1,4 @@
 // Fill out your copyright notice in the Description page of Project Settings.
-// Fill out your copyright notice in the Description page of Project Settings.
 
 
 #include "MyCharacter.h"
@@ -12,16 +11,6 @@ AMyCharacter::AMyCharacter()
 {
  	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
-
-	//for 3rd person camera----------------------------------------
-	SpringArm = CreateDefaultSubobject<USpringArmComponent>( TEXT( "SpringArm" ) );
-	SpringArm->SetupAttachment( RootComponent );
-	SpringArm->bUsePawnControlRotation = true;
-
-	// Grabs the Camera from the MyCharacter.h file then creates an object with a camera component
-	// and gives it the name "Player_Camera"
-	MainCamera = CreateDefaultSubobject<UCameraComponent>( TEXT( "ThirdPersonCamera" ) );
-	MainCamera->SetupAttachment(SpringArm); //Changed to springarm // Creates an attachment and uses to attach to the actor
 
 	// Didnt need this line because of the spring arm, keeping it if we want to implement first person later
 	// Camera->bUsePawnControlRotation = true; // sets PawnControlRotation to true inside the camera component
@@ -54,42 +43,4 @@ void AMyCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCompone
 	// Binds the action "Jump" to a key press (Spacebar) and uses the jump function from the
 	// ACharacter class to make the player jump when the key is pressed
 	PlayerInputComponent->BindAction( "Jump", IE_Pressed, this, &ACharacter::Jump );
-
-	// bind the action "MoveForward" and "MoveRight" to the associated key press and access the
-	// member functions in order to execute that code on the key press
-	PlayerInputComponent->BindAxis( "MoveForward", this, &AMyCharacter::MoveForward );
-	PlayerInputComponent->BindAxis( "MoveRight", this, &AMyCharacter::MoveRight );
-
-	PlayerInputComponent->BindAxis( "TurnCamera", this, &AMyCharacter::Turn );
-	PlayerInputComponent->BindAxis( "LookUp", this, &AMyCharacter::LookUp );
-
-	PlayerInputComponent->BindAxis( "Sprint", this, &AMyCharacter::Sprint );
-}
-
-void AMyCharacter::Sprint( float InputValue )
-{
-	FVector SprintDirection = GetActorForwardVector();
-	AddMovementInput( SprintDirection, InputValue );
-}
-
-void AMyCharacter::MoveForward( float InputValue )
-{
-	FVector ForwardDirection = GetActorForwardVector();
-	AddMovementInput( ForwardDirection, InputValue );
-}
-
-void AMyCharacter::MoveRight( float InputValue )
-{
-	FVector RightDirection = GetActorRightVector();
-	AddMovementInput( RightDirection, InputValue );
-}
-
-void AMyCharacter::Turn( float InputValue )
-{
-	AddControllerYawInput( InputValue );
-}
-
-void AMyCharacter::LookUp( float InputValue )
-{
-	AddControllerPitchInput( InputValue );
 }
