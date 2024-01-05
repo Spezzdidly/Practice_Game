@@ -11,12 +11,6 @@ AMyCharacter::AMyCharacter()
 {
  	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
-
-	// Didnt need this line because of the spring arm, keeping it if we want to implement first person later
-	// Camera->bUsePawnControlRotation = true; // sets PawnControlRotation to true inside the camera component
-
-	bUseControllerRotationPitch = false; // sets the controller rotation pitch to false
-	GetCharacterMovement()->bOrientRotationToMovement = true; // sets the character movement to orient rotation to movement	
 }
 
 // Called when the game starts or when spawned
