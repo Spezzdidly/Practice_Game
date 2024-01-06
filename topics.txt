@@ -48,3 +48,7 @@ https://forums.unrealengine.com/t/how-to-change-max-walk-speed-in-c/383297
 
 // How to make a button object have the events panel on the right
 https://forums.unrealengine.com/t/ue-5-missing-events-panel/565017/5
+
+// Github set up for Godot
+https://www.youtube.com/watch?v=p45gIhudtSQ
+
